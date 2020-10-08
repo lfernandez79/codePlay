@@ -91,7 +91,7 @@ noOdds([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
 let myArr = [300, 200, 600, 150];
 console.log(Math.max(...myArr));
 
-// Destructuring using for of loop
+// Destructuring using "for of" loop
 let names = [];
 let people = [
     {
@@ -123,4 +123,5 @@ findBob = nombres => {
 console.log(findBob(["Jimmy", "Layla", "mandy", "Leo", "mandy", "Bob"]))
 
 
-
+let num = [1,2,3,4,5,6,7,8,9];
+console.log(num.length)
