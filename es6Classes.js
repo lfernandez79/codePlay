@@ -19,7 +19,7 @@ class Model extends Car {
         this.carmodel = model
     }
     show() {
-        return `${this.iOwn()}, ${this.carmodel} model`
+        return `${this.iOwn()}, the model is ${this.carmodel}`
     }
 }
 
