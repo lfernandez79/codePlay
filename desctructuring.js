@@ -33,5 +33,10 @@ const aryaParents = arya.parents;
 console.log(arya.call)
 console.log(aryaParents)
 
+// ES6
 const { call, parents } = arya
 console.log(call)
+
+const betterLogCharacter = ({ call, parents }) => 
+    console.log(call + "'s parents are: " + parents[0] + " and " + parents[1]);
+betterLogCharacter(arya)

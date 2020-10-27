@@ -10,4 +10,5 @@ let myStr = "how can i turn this string into separate values and have the first 
 myStr.split(" ")
 let firstLetterUpperCase = (myStr.split(" ").map(letter => letter[0].toUpperCase() + letter.slice(1)).join(" "))
 console.log(firstLetterUpperCase)
-document.getElementById("upperCase").innerHTML = firstLetterUpperCase;
+
+
