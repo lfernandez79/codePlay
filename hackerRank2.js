@@ -2,21 +2,30 @@ console.log(
     '==================================Anagram 2========================================'
 );
 
-let s = 'abcb';
-let t = 'cadb';
-
-const validAnagram = () => {
-    s.length !== t.length ? false : true;
-    let myArr = {}
-    // split s
-    let sSplitting = s.split('');
-    let tSplitting = t.split("");
-    console.log(sSplitting, tSplitting);
-    // loop through s
 
 
+const validAnagram = (a, b) => {
+    if(a.length !== b.length) {
+        return `These are not valid anagram`;
+    }
+    else {
+        let aSplitting = a.split("");
+        let bSplitting = b.split("").sort();
+        console.log(aSplitting, bSplitting)
+    // loop through a
+        for (let i = 0; i < aSplitting.length; i++) {
+            const element = aSplitting[i];
+            const element2 = bSplitting[i];
+            if(element !== element2) {
+                return false;
+            }
+            else {
+                return `these are anagram`
+            }
+        }
+    }
 };
-validAnagram();
+console.log(validAnagram("abcd", "cadb"));
 
 // loop through t
 // let myArr2 = [];
@@ -31,7 +40,7 @@ validAnagram();
 //     myArr[i] !== myArr2[i] ? false : true
 // }
 
-// const validAnagram = (string1, string2) => {
+// const validAnagram2 = (string1, string2) => {
 
 
 //     for (let i = 0; i < string1.length; i++) {
@@ -41,7 +50,7 @@ validAnagram();
 //     }
 
 // }
-// validAnagram("elbow", "below")
+// validAnagram2("elbow", "below")
 
 // let myArray = [-5, -4, -3, -2, -1, 0, 2, 6, 7, 8, 9 ]
 // console.log(myArray.length -1)
@@ -59,7 +68,7 @@ validAnagram();
 let number = "1234567890";
 console.log(Number(number))
 
-let zipCode = "759";
+let zipCode = "759  * 2 ^ 5";
 
 const result = function () {
     let zipCodeNoSpaceNoLetters = zipCode.replace(/[\D\s+]/g, "");
