@@ -1,31 +1,3 @@
-console.log(
-    '==================================Anagram 2========================================'
-);
-
-
-
-const validAnagram = (a, b) => {
-    if(a.length !== b.length) {
-        return `These are not valid anagram`;
-    }
-    else {
-        let aSplitting = a.split("");
-        let bSplitting = b.split("").sort();
-        console.log(aSplitting, bSplitting)
-    // loop through a
-        for (let i = 0; i < aSplitting.length; i++) {
-            const element = aSplitting[i];
-            const element2 = bSplitting[i];
-            if(element !== element2) {
-                return false;
-            }
-            else {
-                return `these are anagram`
-            }
-        }
-    }
-};
-console.log(validAnagram("abcd", "cadb"));
 
 // loop through t
 // let myArr2 = [];
@@ -64,6 +36,7 @@ console.log(validAnagram("abcd", "cadb"));
 //   ]
 // }
 // console.log(objt)
+console.log("Create a zipcode from a string or numbers, removing special characters, white spaces")
 
 let number = "1234567890";
 console.log(Number(number))
@@ -82,3 +55,30 @@ const result = function () {
     }
 }
 console.log(result())
+
+console.log(
+    '==================================Anagram 2========================================'
+);
+
+const validAnagram = (a, b) => {
+    if (a.length !== b.length) {
+        return `These are not valid anagram`;
+    }
+    else {
+        let aSplitting = a.split("").sort();
+        let bSplitting = b.split("").sort();
+        // loop through a
+        for (let i = 0; i < aSplitting.length; i++) {
+            const element = aSplitting[i];
+            const element2 = bSplitting[i]
+            console.log(element, element2)
+            if (element !== element2) {
+                return false;
+            }
+            else {
+                 `This is an anagram`;
+            }
+        }
+    }
+};
+console.log(validAnagram("abcde", "cadbj"));
