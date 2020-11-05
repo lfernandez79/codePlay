@@ -53,3 +53,12 @@ function multiPointers(array) {
     }
 }
 console.log(multiPointers([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]))
+
+
+const flipping = (name) => {
+    let array = [];
+    const strReversed = name.split("").reverse().join("").toLowerCase();
+    array.push(strReversed)
+    return array
+};
+console.log(flipping("Jose Leonardo Fernandez"));
