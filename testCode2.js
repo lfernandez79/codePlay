@@ -62,3 +62,8 @@ const flipping = (name) => {
     return array
 };
 console.log(flipping("Jose Leonardo Fernandez"));
+
+function hurdleJump(hurdles, jumpHeight) {
+    return hurdles.every(num => num <= jumpHeight)
+}
+console.log(hurdleJump([], 5))
