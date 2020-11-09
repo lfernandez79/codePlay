@@ -67,3 +67,12 @@ function hurdleJump(hurdles, jumpHeight) {
     return hurdles.every(num => num <= jumpHeight)
 }
 console.log(hurdleJump([], 5))
+
+
+const removeABC = (str) => {
+    let removeABC = str.replace(/[a-c]/g, "");
+    let notMatching = str.match(/[a-c]/g)
+    return notMatching
+    
+}
+console.log(removeABC("hello world!"))
