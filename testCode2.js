@@ -68,11 +68,14 @@ function hurdleJump(hurdles, jumpHeight) {
 }
 console.log(hurdleJump([], 5))
 
-
-const removeABC = (str) => {
-    let removeABC = str.replace(/[a-c]/g, "");
-    let notMatching = str.match(/[a-c]/g)
-    return notMatching
-    
+let array = [86, 48, 100, 66];
+const isSeven = () => {
+    let numbers =  array.join("").split("").map(Number);
+    console.log(numbers)
+    if(numbers.includes(7)) {
+        return "Boom";
+    } else {
+        return "These is no 7"
+    }
 }
-console.log(removeABC("hello world!"))
+console.log(isSeven())
