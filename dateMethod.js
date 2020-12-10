@@ -19,4 +19,12 @@ let xmasEveDate = date => {
 }
 console.log(xmasEveDate(new Date(2020, 11, 24)))
 
+// isMath = math => {
+//     return math === 0 ? true : math;
+// }
 
+let num = eval("(0 / 0)");
+const isInfinityNum = () => {
+  return !isFinite(num)
+}
+console.log(isInfinityNum())
