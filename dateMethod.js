@@ -10,5 +10,13 @@ c.setDate(c.getDate() - 2);
 console.log(c.toString());
 console.log(new Date().toISOString().slice(0, 10));
 
-let xmasEveDate = new Date()
-console.log(xmasEveDate)
+let xmasEveDate = date => {
+    if (date.getMonth() === 11 && date.getDate() === 24)  {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(xmasEveDate(new Date(2020, 11, 24)))
+
+
