@@ -32,8 +32,6 @@ function areaRectangule(length, width) {
     return length * width
 }
 console.log(areaRectangule(5, 3))
-document.getElementById('msg').innerHTML =
-    'The rectangule area of 5 lenght by 3 width is: ' + areaRectangule(5, 3)
 
 let city = 'juarez'
 function index0Cap() {
@@ -263,16 +261,3 @@ let reversingString = function () {
     }
 };
 reversingString();
-
-console.log(
-    '=============================Date Method - substracting days==================================='
-);
-const date = new Date(2009, 10, 20);
-date.setDate(date.getDate() - 3);
-console.log(date.toString());
-
-var c = new Date(2017, 1, 1); // 1 Feb -> 30 Jan
-c.setDate(c.getDate() - 2);
-console.log(c.toString());
-
-console.log(new Date().toISOString().slice(0, 10));

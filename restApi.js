@@ -41,6 +41,7 @@ fetch(movieUrl)
     .then(res => console.log(res));
 
 let url = 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits';
-let response = fetch(url).then(res =>
-    res.json().then(info => console.log(info))
-);
+let response = fetch(url)
+    .then(res => res.json()
+    .then(info => console.log(info))
+    );
