@@ -28,3 +28,31 @@ const isInfinityNum = () => {
   return !isFinite(num)
 }
 console.log(isInfinityNum())
+
+let decimal = 7.259
+console.log(Number(decimal.toFixed(2)))
+
+
+function ohmsLaw(v, r, i) {
+    if (v === "" && r === "") {
+        return "Invalid";
+    } 
+    else if (v === "") {
+        return parseFloat((r * i).toFixed(2));
+    } 
+    else if (r === "") {
+        return parseFloat((v / i).toFixed(2));
+    } 
+    else if (i === "") {
+        return parseFloat((v / r).toFixed(2));
+    } 
+    else { 
+        return "Invalid"; 
+    }
+}
+console.log(ohmsLaw(12, 220, ""))
+console.log(ohmsLaw(230, "", 2))
+console.log(ohmsLaw("", "", 10))
+console.log(ohmsLaw(100, 20, 10))
+
+
