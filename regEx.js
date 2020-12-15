@@ -24,7 +24,7 @@ console.log("========== RegEx look in a string for digit and non-digit =========
 let intro = "Hello I'm 40 years old, born in 1979";
 dFind = () => console.log(intro.match(/\D/g).join(""));
 dFind();
-Dfind = () => console.log(intro.match(/\d/g));
+Dfind = () => console.log(intro.match(/\d/g), "\n");
 Dfind()
 
 
@@ -35,3 +35,10 @@ const howManyWords = () => {
     console.log(myStrSplit)
 }
 howManyWords()
+
+//remove special characters except _ and - and spaces
+let specialChar = "Etiam#!!!!!,,, [`po%rta ~sem!] {male*su-ada} (ma*gna) mo^llis... eui$smod???"
+const remChar = () => {
+    return specialChar.match(/(\w|\s|\-)/g).join("")
+}
+console.log(remChar())
