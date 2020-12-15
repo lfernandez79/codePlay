@@ -83,12 +83,6 @@ function factorialLoop(num) {
 }
 console.log(factorialLoop(5))
 
-// repleace a character in a string
-function replacing(str) {
-    return str.replace(/-/g, '_')
-}
-console.log(replacing('Jose-Leonardo-Fernandez-Arellano'))
-
 // uncomment to execute every 5 seconds code below
 // setInterval(sayHello, 5000) 
 
@@ -157,13 +151,6 @@ console.log(longBurpEs6(3));
 
 const burpLiteral = num => `Bu${'r'.repeat(num)}p!`;
 console.log(burpLiteral(5));
-
-console.log("========== RegEx look in a string for digit and non-digit ==========")
-let intro = "Hello I'm 40 years old, born in 1979";
-dFind = () => console.log(intro.match(/\D/g).join(""));
-dFind();
-Dfind = () => console.log(intro.match(/\d/g));
-Dfind()
 
 console.log("========== Array, function to eliminate duplicates ==========")
 

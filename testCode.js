@@ -69,13 +69,6 @@
 // let myArray = [1, 2, 3]
 // myArray.forEach((el, index) => console.log(index))
 
-// let myString = "jose leonardo. fernandez arellano, 1979 semi-developer?"
-// howManyWords = () => {
-//     let myStrSplit = myString.replace(/[0-9\,\.\?]/g, "").split(" ")
-//     console.log(myStrSplit)
-// }
-// howManyWords()
-
 function noOdds(arr) {
     arr.forEach(num => {
         if (num % 2 === 0) {
@@ -109,10 +102,10 @@ let people = [
     },
 ];
 
-for (const { myName, family: { wife: w, daugthers: { child1: i, child2: c }, pet: g }, age: a, myBrother: b } of people) {
+for (const { myName: L, family: { wife: w, daugthers: { child1: i, child2: c }, pet: g }, age: a, myBrother: b } of people) {
 
-    console.log(`My name is ${myName}, my wife's name is ${w}.\n I have two girls, their names are ${i} and ${c}. I also have a dog ${g} and finally I'm ${a} years old`)
-    names.push(myName, b);
+    console.log(`My name is ${L}, my wife's name is ${w}.\n I have two girls, their names are ${i} and ${c}. I also have a dog ${g} and finally I'm ${a} years old`)
+    names.push(L, b);
     console.log(names)
 }
 

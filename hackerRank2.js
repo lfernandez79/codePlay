@@ -36,25 +36,10 @@
 //   ]
 // }
 // console.log(objt)
-console.log("Create a zipcode from a string or numbers, removing special characters, white spaces")
+
 
 let number = "1234567890";
 console.log(Number(number))
-
-let zipCode = "759  * 2 ^ 5";
-
-const result = function () {
-    let zipCodeNoSpaceNoLetters = zipCode.replace(/[\D\s+]/g, "");
-    let toNum = zipCodeNoSpaceNoLetters;
-    console.log(toNum.length)
-    if (toNum.length !== 5) {
-        return false
-    }
-    else if (toNum.length === 5) {
-        return Number(toNum)
-    }
-}
-console.log(result())
 
 console.log(
     '==================================Anagram 2========================================'
