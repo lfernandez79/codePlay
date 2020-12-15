@@ -45,4 +45,22 @@ console.log("3 " + myCar.show())
 
 // Calling last class Engine
 myCar = new Engine("VOLVO", "black", "S60", 4);
-console.log("4 " + myCar.carEngine())
+console.log("4 " + myCar.carEngine() + "\n")
+
+const currentJob = {
+    yourName: "Lenny",
+    jobTitle: "none yet", 
+};
+console.log(currentJob)
+
+const studing = {
+    ...currentJob,
+    what: "coding",
+    specialty: "reactjs",
+}
+console.log(studing)
+
+const multiplication = (...nums) => {
+    return nums.filter(n => n > 100)
+}
+console.log(multiplication(10, 100, 500, 1000, 20, 30))

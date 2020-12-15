@@ -54,5 +54,3 @@ console.log(ohmsLaw(12, 220, ""))
 console.log(ohmsLaw(230, "", 2))
 console.log(ohmsLaw("", "", 10))
 console.log(ohmsLaw(100, 20, 10))
-
-
