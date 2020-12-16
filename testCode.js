@@ -84,37 +84,18 @@ noOdds([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
 let myArr = [300, 200, 600, 150];
 console.log(Math.max(...myArr));
 
-// Destructuring using "for of" loop
-let names = [];
-let people = [
-    {
-        myName: "Leo",
-        family: {
-            wife: "Guera",
-            daugthers: {
-                child1: "Isabella",
-                child2: "Cecelia"
-            },
-            pet: "Dog gracie",
-        },
-        age: 41,
-        myBrother: "Abraham"
-    },
-];
-
-for (const { myName: L, family: { wife: w, daugthers: { child1: i, child2: c }, pet: g }, age: a, myBrother: b } of people) {
-
-    console.log(`My name is ${L}, my wife's name is ${w}.\n I have two girls, their names are ${i} and ${c}. I also have a dog ${g} and finally I'm ${a} years old`)
-    names.push(L, b);
-    console.log(names)
-}
-
 
 findBob = nombres => {
     return nombres.indexOf("Bob")
 }
 console.log(findBob(["Jimmy", "Layla", "mandy", "Leo", "mandy", "Bob"]))
 
+const tpChecker = (home) => {
+    let totalDays = 14
+    let perRoll = 500 * home.tp;
+    let perPersonperDaySheets = 57 * home.people;
+    let daysTPwillLast = Math.floor(perRoll / perPersonperDaySheets);
+    return daysTPwillLast < totalDays ? `Your TP will only last ${daysTPwillLast} days, buy more!` : `Your TP will last ${daysTPwillLast} days, no need to panic!`
+}
+console.log(tpChecker({people: 1, tp: 1}))
 
-let num = [1,2,3,4,5,6,7,8,9];
-console.log(num.length)
