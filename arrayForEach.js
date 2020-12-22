@@ -135,17 +135,27 @@ function areaT(x, y) {
 }
 console.log(areaT([0, 3, 6], [0, 3, 0]))
 
+
 //  what indices in the array add up to target
-let arrayToFindTarget = [2, 7, 11, 15];
-let target = 9;
+let arrayToFindTarget = [3, 2, 4];
+let target = 6;
 
 const sumTwoNum = () => {
     let leftNum = 0;
-    let rigthNum = arrayToFindTarget.length -1
-    while(leftNum < rigthNum) {
+    let rigthNum = arrayToFindTarget.length - 1;
+
+    while (leftNum < rigthNum) {
+
         let sum = arrayToFindTarget[leftNum] + arrayToFindTarget[rigthNum];
-        if(sum > target) {
-            return [arrayToFindTarget, arrayToFindTarget[rigthNum]]
+        console.log(sum)
+        if (sum === target) {
+            return [leftNum, rigthNum]
+        }
+        else if (sum > target) {
+            rigthNum--
+        } 
+        else {
+            leftNum++
         }
     }
 }
