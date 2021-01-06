@@ -34,7 +34,7 @@ const validAnagram = (string1, string2) => {
         console.log(letter)
     }
 }
-validAnagram("elbow", "below")
+validAnagram("lenny", "lenny")
 
 console.log("========== Multi pointer patterns, which pair will result in 0 ==========");
 

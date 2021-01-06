@@ -147,15 +147,15 @@ const sumTwoNum = () => {
     while (leftNum < rigthNum) {
 
         let sum = arrayToFindTarget[leftNum] + arrayToFindTarget[rigthNum];
-        console.log(sum)
+        console.log(sum, arrayToFindTarget[leftNum], arrayToFindTarget[rigthNum])
         if (sum === target) {
-            return [leftNum, rigthNum]
+            return [leftNum, rigthNum];
         }
         else if (sum > target) {
             rigthNum--
         } 
         else {
-            leftNum++
+            leftNum++;
         }
     }
 }
