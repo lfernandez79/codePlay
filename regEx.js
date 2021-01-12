@@ -43,11 +43,16 @@ const remChar = () => {
 }
 console.log(remChar())
 
-let word = "abracadabra"
+let word = "my pyx"
 const getVowels = () => {
     let count = 0;
-    let vowels = word.match(/[aeou]/g).length;
-    count =+ vowels 
-    return count
+    let vowels = word.match(/[aeou]/g);
+
+    if (vowels == null) {
+        return 0
+    } else {
+        count = + vowels.join("").length
+        return count
+    }
 }
 console.log(getVowels())
