@@ -1,15 +1,13 @@
 
-let myString = "Lenny";
+let myString = "Jose";
 let result = {};
-// console.log(myString.length)
 
 function countChar() {
  for (let i = 0; i < myString.length; i++) {
     const element = myString[i];
      result[element] ? result[element] += 1 : result[element] = 1
  }
- console.log(result
-    )
+ console.log(result)
 }
 countChar()
 

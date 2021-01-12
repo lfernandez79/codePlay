@@ -42,3 +42,12 @@ const remChar = () => {
     return specialChar.match(/(\w|\s|\-)/g).join("")
 }
 console.log(remChar())
+
+let word = "abracadabra"
+const getVowels = () => {
+    let count = 0;
+    let vowels = word.match(/[aeou]/g).length;
+    count =+ vowels 
+    return count
+}
+console.log(getVowels())
