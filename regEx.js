@@ -56,3 +56,5 @@ const getVowels = () => {
     }
 }
 console.log(getVowels())
+
+console.log(typeof 12)
