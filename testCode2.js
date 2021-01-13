@@ -78,19 +78,5 @@ const isSeven = () => {
 console.log(isSeven())
 
 
-let array1 = [true, true, true, false,
-    true, true, true, true,
-    true, false, true, false,
-    true, false, false, true,
-    true, true, true, true,
-    false, false, true, true];
 
-const howManyTrues = () => {
-     return array1.filter(item => {
-        if(item == true) {
-           return item
-        }
-    }).length
-}
-console.log(howManyTrues())
 
