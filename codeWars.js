@@ -28,20 +28,16 @@ const sortArray = () => {
 
         if (num % 2 === 0) {
             evenNum.push(num)
-            console.log(evenNum)
-        } else {
-            
-                oddNum.push(num)
-                console.log(oddNum)
-            
+        } else {   
+            oddNum.push(num)  
         }
     })
+    
     oddNum.sort((a, b) => a - b)
     
     unsortArray.forEach(n => {
         if (n % 2 === 0) {
-            oddNumSorted.push(evenNum.shift())
-            console.log(evenNum.shift())
+            oddNumSorted.push(evenNum.shift())    
         } else {
             oddNumSorted.push(oddNum.shift())
         }
@@ -50,3 +46,12 @@ const sortArray = () => {
 }
 console.log(sortArray())
 
+// OR
+let unsortArray2 = [7, 8, 6, 5, 4];
+const newSortarray = () => {
+    const odd = unsortArray2.filter(n => n % 2 !== 0)
+    const sorted = odd.sort((a, b) => a-b);
+    unsortArray2.map(n => n % 2 === 0 ? n : odd.shift())
+    
+}
+newSortarray()
