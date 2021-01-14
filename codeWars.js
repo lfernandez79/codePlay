@@ -55,3 +55,12 @@ const newSortarray = () => {
     
 }
 newSortarray()
+
+// Square Every Digit
+const squareEveryDigit = (num) => {
+    
+    const numArray = ([...`${num}`].map(Number))
+    const squared = numArray.map(n => Math.pow(n, 2))
+    return Number(squared.join(""))
+}
+console.log(squareEveryDigit(9119))
