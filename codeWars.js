@@ -1,5 +1,7 @@
 //How mamy trues you can find in the array, neded value. 
 
+const { turquoise } = require("color-name");
+
 let array1 = [true, true, true, false,
     true, true, true, true,
     true, false, true, false,
@@ -59,8 +61,21 @@ newSortarray()
 // Square Every Digit
 const squareEveryDigit = (num) => {
     
-    const numArray = ([...`${num}`].map(Number))
+    const numArray = ([...`${num}`].map(Number)) // number pass to an array
     const squared = numArray.map(n => Math.pow(n, 2))
     return Number(squared.join(""))
 }
 console.log(squareEveryDigit(9119))
+
+// compare two string if they have same ending.
+let str = "ninjaleoja";
+let ending = "ja";
+
+const compare = () => {
+  if(str.endsWith(ending)) {
+      return true
+  }
+  return false
+    
+}
+console.log(compare());
