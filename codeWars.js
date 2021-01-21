@@ -79,3 +79,15 @@ const compare = () => {
     
 }
 console.log(compare());
+
+const findSum = (n) => {
+ let total = 0;
+ for (let i = 0; i <= n; i++) {
+     const n = i;
+     if(n % 3 === 0 || n % 5 === 0) {
+        total += n
+     } 
+  }
+  return total
+}
+console.log(findSum(10))
