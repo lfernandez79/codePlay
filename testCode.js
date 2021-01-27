@@ -99,3 +99,20 @@ const tpChecker = (home) => {
 }
 console.log(tpChecker({people: 1, tp: 1}))
 
+// reducer
+
+console.log(myArr.reduce((acc, cur, index, src) => acc + cur))
+
+// reverse a word
+
+let word = "Jose Leonardo";
+let arr = word.split("").join("");
+let final = [];
+const reverse = () => {
+    
+    console.log(arr)
+}
+reverse()
+
+
+
