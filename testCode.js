@@ -105,14 +105,16 @@ console.log(myArr.reduce((acc, cur, index, src) => acc + cur))
 
 // reverse a word
 
-let word = "Jose Leonardo";
-let arr = word.split("").join("");
-let final = [];
+let string = "Jose Leonardo Fernandez Arellano";
+let arr = string.split(" ");
+
 const reverse = () => {
     
-    console.log(arr)
+    return arr.map(word => word.length <= 4 ? 
+    word : word.split("").reverse().join("")).join(" ")
+
 }
-reverse()
+console.log(reverse())
 
 
 
