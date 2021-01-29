@@ -7,16 +7,15 @@ const validAnagram = (string1, string2) => {
     let obj = {};
     for (let i = 0; i < string1.length; i++) {
         let letter = string1[i];
-        // if letter exist, increment, otherwise set to 1
+        // if letter exist, increment +1, otherwise set to 1
         obj[letter] ? obj[letter] += 1 : obj[letter] = 1
     }
-    console.log(obj)
 
+    let obj2 = {};
     for (let i = 0; i < string2.length; i++) {
-        const letter = string2[i];
+        const letter2 = string2[i];
         // if can't find letter in or letter is zero then it is not an anagram
-        !obj[letter] ? false : obj[letter] -= 1
-        console.log(letter)
+        obj2[letter2] ? obj2[letter2] =+ 1 : obj2[letter2] = 1
     }
 }
 validAnagram("lenny", "lenny")
