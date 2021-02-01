@@ -19,21 +19,6 @@ while (count < colors1.length) {
     count++
 }
 
-// qick bizzbuzz code challange
-
-// const bizzbuzz = () => {
-//   for (i = 1; i < 101; i++) {
-//     if (i % 15 === 0) {
-//       console.log('bizzbuzz');
-//     } else if (i % 5 === 0) {
-//       console.log('buzz');
-//     } else if (i % 3 === 0) {
-//       console.log('fizz');
-//     }
-//     console.log(i);
-//   }
-// };
-// bizzbuzz();
 
 console.log("=================find index of any element, add new element to array================");
 let friends = ['charlie', 'liz', 'David', 'Mattias', 'Leo'];

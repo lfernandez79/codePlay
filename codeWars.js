@@ -1,7 +1,5 @@
 //How mamy trues you can find in the array, neded value. 
 
-const { turquoise } = require("color-name");
-
 let array1 = [true, true, true, false,
     true, true, true, true,
     true, false, true, false,
@@ -91,3 +89,23 @@ const findSum = (n) => {
   return total
 }
 console.log(findSum(10))
+
+
+// qick bizzbuzz code challange
+
+const bizzbuzz = (n) => {
+    let myNums = []
+    for (i = 1; i <= n; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            myNums.push('bizzbuzz')
+        } else if (i % 5 === 0) {
+            myNums.push('buzz');
+        } else if (i % 3 === 0) {
+            myNums.push('fizz');
+        } else {
+            myNums.push(i)
+        }
+    }
+    return myNums
+};
+console.table(bizzbuzz(20));
