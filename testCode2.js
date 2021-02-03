@@ -57,11 +57,13 @@ console.log(isSeven())
 // is there a hashTag?
 
 const hashTag = (str) => {
-    let newArr = [];
+    if(str === "" || str === " ") {
+        return false
+    }
+    else {
     let myArr = str.split(" ");
-    let firstLetterCap = myArr.map(word => `${word[0].toUpperCase()}${word.slice(1)}`)
-    
-    return firstLetterCap
-  
+    let firstLetterCap = myArr.map(word => `${word[0].toUpperCase()}${word.slice(1)}`)  
+        return firstLetterCap
+    }
 }
-console.log(hashTag("Leo Fernandez arellano jose"))
+console.log(hashTag("jjjjjjjj Leonardo fernandez"))
