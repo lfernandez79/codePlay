@@ -63,7 +63,7 @@ const hashTag = (str) => {
     else {
     let myArr = str.split(" ");
     let firstLetterCap = myArr.map(word => `${word[0].toUpperCase()}${word.slice(1)}`)  
-        return firstLetterCap
+        
     }
 }
 console.log(hashTag("jjjjjjjj Leonardo fernandez"))
