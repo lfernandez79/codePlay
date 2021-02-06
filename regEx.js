@@ -59,3 +59,15 @@ console.log(getVowels())
 
 console.log(typeof 12)
 
+// Pullin domain name from URL
+const getDomain = (str) => {
+    let final = [];
+    let regEx = /[\/\.]/g
+    let addSpace = str.replace(regEx, " ")
+    let newArr = addSpace.split(" ")
+    let longWords = newArr.filter(word => word.length >= 4)
+        final.push(longWords.filter(item => item.match(/[aeiou]/g)).join(" "))
+
+        return final.join("")
+}
+console.log(getDomain("www.xakep.ru"))
