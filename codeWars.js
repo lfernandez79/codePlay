@@ -116,3 +116,20 @@ const phoneNumber = (numbers) => {
     return `(${nums[0]}${nums[1]}${nums[2]}) ${nums[3]}${nums[4]}${nums[5]}-${nums[6]}${nums[7]}${nums[8]}${nums[9]}`
 }
     console.log(phoneNumber([0,1,2,3,4,5,6,7,8,9]))
+
+
+function bears(x, s) {
+    let newArr = [];
+    let regEx = s.match(/(B8)|(8B)|()/g).join("")
+
+    newArr.push(regEx)
+
+    if (regEx.length >= x) {
+        newArr.push(true)
+    }
+    else {
+        newArr.push(false)
+    }
+
+    return newArr
+}
