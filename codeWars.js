@@ -119,17 +119,17 @@ const phoneNumber = (numbers) => {
 
 
 function bears(x, s) {
-    let newArr = [];
-    let regEx = s.match(/(B8)|(8B)|()/g).join("")
-
-    newArr.push(regEx)
+    let regEx = s.match(/(B8)|(8B)|()/g)
 
     if (regEx.length >= x) {
-        newArr.push(true)
+        let greaterThanX =`${regEx.join("")}`.split(" ")
+        greaterThanX.push(true)
+        return greaterThanX
     }
-    else {
-        newArr.push(false)
-    }
-
-    return newArr
+    else if(regEx.length <= x) {
+        let lessThanX = `${regEx.join("")}`.split(" ")
+        lessThanX.push(false)
+        return lessThanX
+    } 
 }
+console.log(bears(7, "8j8mBliB8gimjB8B8jlB"))
