@@ -121,14 +121,15 @@ const phoneNumber = (numbers) => {
 function bears(x, s) {
     let regEx = s.match(/(B8)|(8B)|()/g)
     let validItems = regEx.filter(item => item)
+   
     if (validItems.length >= x) {
-        let greaterThanX =`${validItems.join("")}`.split(" ")
+        let greaterThanX = validItems.join("").split(" ")
         
         greaterThanX.push(true)
         return greaterThanX
     }
     else if(validItems.length <= x) {
-        let lessThanX = `${validItems.join("")}`.split(" ")
+        let lessThanX = validItems.join("").split(" ")
         lessThanX.push(false)
         return lessThanX
     } 
