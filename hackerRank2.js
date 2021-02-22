@@ -38,32 +38,52 @@
 // console.log(objt)
 
 
-let number = "1234567890";
-console.log(Number(number))
+// let number = "1234567890";
+// console.log(Number(number))
 
-console.log(
-    '==================================Anagram 2========================================'
-);
+// console.log(
+//     '==================================Anagram 2========================================'
+// );
 
-const validAnagram = (a, b) => {
-    if (a.length !== b.length) {
-        return `These are not valid anagram`;
-    }
-    else {
-        let aSplitting = a.split("").sort();
-        let bSplitting = b.split("").sort();
-        // loop through a
-        for (let i = 0; i < aSplitting.length; i++) {
-            const element = aSplitting[i];
-            const element2 = bSplitting[i]
-            console.log(element, element2)
-            if (element !== element2) {
-                return false;
-            }
-            else {
-                 `This is an anagram`;
-            }
+// const validAnagram = (a, b) => {
+//     if (a.length !== b.length) {
+//         return `These are not valid anagram`;
+//     }
+//     else {
+//         let aSplitting = a.split("").sort();
+//         let bSplitting = b.split("").sort();
+//         // loop through a
+//         for (let i = 0; i < aSplitting.length; i++) {
+//             const element = aSplitting[i];
+//             const element2 = bSplitting[i]
+//             console.log(element, element2)
+//             if (element !== element2) {
+//                 return false;
+//             }
+//             else {
+//                  `This is an anagram`;
+//             }
+//         }
+//     }
+// };
+// console.log(validAnagram("abcde", "cadbj"));
+
+
+// Circular Array
+
+let node = 3;
+let m = 4
+endNode = [1, 3, 2, 3]
+
+const mostVisited = () => {
+    let myNewArr = []
+    for (let i = 0; i < node+1; i++) {
+        const element = i;
+       
+        if(element === endNode[i]) { 
+            myNewArr.push(element)
         }
     }
-};
-console.log(validAnagram("abcde", "cadbj"));
+    return myNewArr
+}
+console.log(mostVisited())
