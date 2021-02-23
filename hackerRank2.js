@@ -71,20 +71,28 @@
 
 // Circular Array
 
-let node = 10;
-
-endNode = [1, 5, 10, 5];
-
+let node = 3;
+let rounds = [1, 3, 2 ,3];
 const mostVisited = () => {
-    let myNewArr = []
-    for (let i = 0; i < node + 1; i++) {
-        const num = i;
-        endNode.forEach(item => {
-            if(num !== item) {
-                myNewArr.push(num)
+    let final = []
+    let start = rounds[0],  end = rounds[rounds.length-1]
+
+    if(start <= end) {
+        let res = new Array(end - start +1)
+         for (let i = 0; i < res.length; i++) {
+            res[i] = start + i
+         }
+         return res
+    } else {
+            let res = new Array(end + n - start + 1)
+            for (let i = 0; i < end; i++) {
+                res[i] = start + 1
             }
-        })
-     }
-     return myNewArr
+            for (let j = 0; j < res.length; j++) {
+                res[j] = start + j++
+                
+            }     
+    }
+    return final
 }
 console.log(mostVisited())
