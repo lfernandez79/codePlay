@@ -124,7 +124,6 @@ function bears(x, s) {
    
     if (validItems.length >= x) {
         let greaterThanX = validItems.join("").split(" ")
-        
         greaterThanX.push(true)
         return greaterThanX
     }
@@ -135,3 +134,7 @@ function bears(x, s) {
     } 
 }
 console.log(bears(7, "EvHB8KN8ik8BiyxfeyKBmiCMj"))
+
+for (let i = 0; i < array.length; i++) {
+    
+}

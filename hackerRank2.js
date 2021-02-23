@@ -71,19 +71,20 @@
 
 // Circular Array
 
-let node = 3;
-let m = 4
-endNode = [1, 3, 2, 3]
+let node = 10;
+
+endNode = [1, 5, 10, 5];
 
 const mostVisited = () => {
     let myNewArr = []
-    for (let i = 0; i < node+1; i++) {
-        const element = i;
-       
-        if(element === endNode[i]) { 
-            myNewArr.push(element)
-        }
-    }
-    return myNewArr
+    for (let i = 0; i < node + 1; i++) {
+        const num = i;
+        endNode.forEach(item => {
+            if(num !== item) {
+                myNewArr.push(num)
+            }
+        })
+     }
+     return myNewArr
 }
 console.log(mostVisited())

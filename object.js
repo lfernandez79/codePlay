@@ -17,9 +17,12 @@ const validAnagram = (string1, string2) => {
         // if can't find letter in or letter is zero then it is not an anagram
         obj2[letter2] ? obj2[letter2] =+ 1 : obj2[letter2] = 1
     }
+    
 }
-validAnagram("lenny", "lenny")
+console.log(validAnagram("lenny", "lenny"))
 
+
+console.log("Count how may string")
 const countStr = (str) => {
     let myObj = {};
         let splitStr = str.split("");
