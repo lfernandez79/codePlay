@@ -4,7 +4,6 @@
 // for (i = 0; i < tSplitting.length; i++) {
 //   let letter = tSplitting[i];
 //   myArr2[letter] ? (myArr2[letter] += 1) : (myArr2[letter] = 1);
-
 // }
 
 // let compare = () => {
