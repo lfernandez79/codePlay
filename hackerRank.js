@@ -1,12 +1,12 @@
 console.log('===============Buil the Subsequences===============');
 
-let arr = ['a', 'b', 'c'];
-for (let i = 0; i <= arr.length; i++) {
+let arr = ["a", "b", "c"];
+for (let i = 0; i < arr.length; i++) {
   let a = [];
   for (let j = i; j < arr.length; j++) {
     a.push(arr[j]);
-    console.log(a);
   }
+  console.log(a);
 }
 
 console.log('==================Fun with Anagrams===================');
