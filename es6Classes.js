@@ -67,6 +67,7 @@ console.log(multiplication(10, 100, 500, 1000, 20, 30))
 
 // Destructuring using "for of" loop
 let names = [];
+let kids = [];
 let people = [
     {
         myName: "Leo",
@@ -87,5 +88,8 @@ for (const { myName: L, family: { wife: w, daugthers: { child1: i, child2: c }, 
 
     console.log(`My name is ${L}, my wife's name is ${w}.\n I have two girls, their names are ${i} and ${c}. I also have a dog ${g} and finally I'm ${a} years old`)
     names.push(L, b);
-    console.log(names)
+   
+    kids.push(i, c)
 }
+console.log(names)
+console.log(kids)
