@@ -60,11 +60,9 @@
 // console.log(filter)
 
 // console.log("========== Sum of Found Indexes in array which match the chosen number ==========")
-
-
-// const reducing = (array, n) =>
-//     array.reduce((sum, num, index) => sum + (num === n ? index : 0), 0)
-//     console.log(reducing([1, 2, 3, 3, 3, 2], 1))
+const reducing = (array, n) =>
+    array.reduce((sum, num, index) => sum + (num === n ? index : 0), 0)
+    console.log(reducing([1, 2, 3, 3, 3, 2], 1))
 
 // let myArray = [1, 2, 3]
 // myArray.forEach((el, index) => console.log(index))
