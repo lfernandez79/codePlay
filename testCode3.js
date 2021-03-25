@@ -5,7 +5,10 @@ let coders = [
     { firstName: 'Sou', lastName: 'B.', country: 'Japan', continent: 'Asia', age: 49, language: 'PHP' },
 ];
 
-let result = coders.reduce((acc, cur, i, arr) => {
-    return acc > cur.age ? acc : cur.age
-}, 0)
-console.log(result)
+const findSeniorCoder = () => {
+
+     let pickSenior = Math.max(...coders.map(coder => coder.age))
+     let maxAge = coders.filter(user => user.age === pickSenior);
+     return maxAge
+}
+console.log(findSeniorCoder());
