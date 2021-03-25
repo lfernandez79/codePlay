@@ -62,7 +62,7 @@
 // console.log("========== Sum of Found Indexes in array which match the chosen number ==========")
 const reducing = (array, n) =>
     array.reduce((sum, num, index) => sum + (num === n ? index : 0), 0)
-    console.log(reducing([1, 2, 3, 3, 3, 2], 1))
+    console.log(reducing([1, 2, 3, 3, 3, 2], 3))
 
 // let myArray = [1, 2, 3]
 // myArray.forEach((el, index) => console.log(index))
@@ -99,7 +99,10 @@ console.log(tpChecker({people: 1, tp: 1}))
 
 // reducer
 
-console.log(myArr.reduce((acc, cur, index, src) => acc + cur))
+console.log(myArr.reduce((acc, cur, index, src) => {
+    
+ return acc + cur
+}))
 
 // reverse a word
 
