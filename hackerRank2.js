@@ -70,28 +70,11 @@
 
 // Circular Array
 
-let node = 3;
-let rounds = [1, 3, 2 ,3];
-const mostVisited = () => {
-    let final = []
-    let start = rounds[0],  end = rounds[rounds.length-1]
+const arrCircular = ["a", "b", "c"]
 
-    if(start <= end) {
-        let res = new Array(end - start +1)
-         for (let i = 0; i < res.length; i++) {
-            res[i] = start + i
-         }
-         return res
-    } else {
-            let res = new Array(end + n - start + 1)
-            for (let i = 0; i < end; i++) {
-                res[i] = start + 1
-            }
-            for (let j = 0; j < res.length; j++) {
-                res[j] = start + j++
-                
-            }     
-    }
-    return final
+const findValue = (index) => {
+    let remainder = index % arrCircular.length;
+    return arrCircular[remainder === 0 ? arr.length -1 : remainder -1]
 }
-console.log(mostVisited())
+
+console.log(findValue(5))
