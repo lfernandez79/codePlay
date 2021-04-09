@@ -74,7 +74,8 @@ const arrCircular = ["a", "b", "c"]
 
 const findValue = (index) => {
     let remainder = index % arrCircular.length;
+    console.log(remainder)
     return arrCircular[remainder === 0 ? arr.length -1 : remainder -1]
 }
 
-console.log(findValue(5))
+console.log(findValue(4))
