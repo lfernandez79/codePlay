@@ -118,30 +118,32 @@ console.log("========= area of triangule ===========")
 function areaT(x, y) {
     return [(x[0] + y[0]), (x[1] + y[1]), (x[2] + y[2])]
 }
-console.log(areaT([0, 3, 6], [0, 3, 0]))
+console.log(areaT([0, 3, 6], [0, 3, 0])) + "\n"
 
 
-//  what indices in the array add up to target
-let arrayToFindTarget = [3, 2, 4];
-let target = 6;
+console.log("what indices in the array add up to target")
+let arrayToFindTarget = [1, 2, 3, 4, 5, 6, 7, 8];
+let target = 15;
 
 const sumTwoNum = () => {
     let leftNum = 0;
     let rigthNum = arrayToFindTarget.length - 1;
-
+    let result = [];
+    
     while (leftNum < rigthNum) {
 
         let sum = arrayToFindTarget[leftNum] + arrayToFindTarget[rigthNum];
-        console.log(sum, arrayToFindTarget[leftNum], arrayToFindTarget[rigthNum])
+        console.log(arrayToFindTarget[leftNum], arrayToFindTarget[rigthNum],  " " + "result: " + sum)
+        
         if (sum === target) {
-            return [leftNum, rigthNum];
+            return [arrayToFindTarget[leftNum], arrayToFindTarget[rigthNum]]; 
         }
         else if (sum > target) {
-            rigthNum--
+            rigthNum--;
         } 
         else {
             leftNum++;
         }
     }
 }
-console.log(sumTwoNum())
+console.log(sumTwoNum());

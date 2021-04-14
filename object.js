@@ -32,5 +32,3 @@ const countStr = (str) => {
         return myObj
 }
 console.log(countStr("abaabb"))
-
-
