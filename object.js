@@ -32,3 +32,21 @@ const countStr = (str) => {
         return myObj
 }
 console.log(countStr("abaabb"))
+
+// Count duplicates
+
+let myStr = "aabbcde";
+const findDuplicate = () => {
+    let result = {}
+    let toArray = myStr.split("");
+    toArray.forEach((letter, i) => {
+        if(result[letter]) {
+            result[letter] += 1
+        }
+        else {
+            result[letter] = 1
+        }
+    })
+    return result
+}
+console.log(findDuplicate())
