@@ -147,3 +147,10 @@ const sumTwoNum = () => {
     }
 }
 console.log(sumTwoNum());
+
+
+const runningSum = (nums) => {
+    nums.reduce((acc, cur, i, arr) => arr[i] += acc)
+    return nums
+}
+console.log(runningSum([2, 2, 2, 2]))
