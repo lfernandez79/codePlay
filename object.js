@@ -38,13 +38,13 @@ console.log(countStr("abaabb"))
 let myStr = "aabbcde";
 const findDuplicate = () => {
     let result = {}
-    let toArray = myStr.split("");
-    toArray.forEach((letter, i) => {
-        if(result[letter]) {
-            result[letter] += 1
+    let arr = myStr.split("")
+    arr.forEach((l, i) => {
+        if(l) {
+            result[l += 1]
         }
         else {
-            result[letter] = 1
+            result[l = 1]
         }
     })
     return result
