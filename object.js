@@ -35,18 +35,23 @@ console.log(countStr("abaabb"))
 
 // Count duplicates
 
-let myStr = "aabbcde";
+let myStr = "aabbcdezzz";
 const findDuplicate = () => {
     let result = {}
     let arr = myStr.split("")
-    arr.forEach((l, i) => {
-        if(l) {
-            result[l += 1]
+    arr.forEach((l) => {
+        if(result[l]) {
+            result[l] += 1
         }
         else {
-            result[l = 1]
+            result[l] = 1
         }
     })
-    return result
+    let values = Object.values(result)
+    return values.filter((num, i) => {
+        if(num > 1) {
+          return num
+        }
+    })
 }
 console.log(findDuplicate())
