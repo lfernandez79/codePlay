@@ -97,7 +97,7 @@ const tpChecker = (home) => {
 }
 console.log(tpChecker({people: 1, tp: 1}))
 
-// reducer
+console.log("===============reduce==============")
 
 console.log(myArr.reduce((acc, cur, index, src) => {
     

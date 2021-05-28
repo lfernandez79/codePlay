@@ -1,21 +1,22 @@
-let httpRequest = new XMLHttpRequest();
+// let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+// let httpRequest = new XMLHttpRequest();
 
-httpRequest.open(
-    "GET",
-    "https://www.omdbapi.com/?t=Tron%20Legacy&apikey=trilogy",
+// httpRequest.open(
+//     "GET",
+//     "https://www.omdbapi.com/?t=Tron%20Legacy&apikey=trilogy",
 
-);
-httpRequest.responseType = "json"
-httpRequest.send();
+// );
+// httpRequest.responseType = "json"
+// httpRequest.send();
 
-httpRequest.onload = function () {
-    if (httpRequest.status !== 200) {
-        console.log(`Error ${httpRequest.status} ${httpRequest.statusText}`)
-    } else {
-        console.log(`Done, got ${httpRequest.responseType} response and status was: ${httpRequest.status}`)
-    }
-    console.log(httpRequest.response)
-}
+// httpRequest.onload = function () {
+//     if (httpRequest.status !== 200) {
+//         console.log(`Error ${httpRequest.status} ${httpRequest.statusText}`)
+//     } else {
+//         console.log(`Done, got ${httpRequest.responseType} response and status was: ${httpRequest.status}`)
+//     }
+//     console.log(httpRequest.response)
+// }
 
 
 // let httpRequest2 = new XMLHttpRequest();
