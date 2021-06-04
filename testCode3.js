@@ -13,16 +13,27 @@ const findSeniorCoder = () => {
 }
 console.log(findSeniorCoder());
 
-let arr = [1, 8];
+let arr = [1];
 const reducer = () => {
     if (arr.length === 0) {
         return "even"
     }
-    let sum = arr.reduce((acc, cur) =>  acc + cur)
+    let sum = arr.reduce((acc, cur) => acc + cur)
     return sum % 2 === 0 ? "even" : "odd"
 }
 console.log(reducer())
 
 
-
-
+let myArray = [2, 2, 2, 2]
+const sumEvenIndexes = () => {
+    let arr = [];
+    myArray.filter((num, i) => {
+        if (i % 2 === 0) {
+            arr.push(num)
+        }
+    })
+    return arr.reduce((acc, cur) => {
+        return acc + cur
+    }, 0) * myArray[myArray.length -1]
+}
+console.log(sumEvenIndexes());
