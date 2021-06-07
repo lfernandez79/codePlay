@@ -37,3 +37,20 @@ const sumEvenIndexes = () => {
     }, 0) * myArray[myArray.length -1]
 }
 console.log(sumEvenIndexes());
+
+let myStr = "a=1, b=2, c=3, d=4";
+
+const obj = () => {
+    let strings = myStr.split(', ');
+    let resultObject = {};
+    console.log(strings)
+    strings.forEach(string => {
+        if (string !== '') {
+            let [key, value] = string.split('=');
+            
+            resultObject[key] = Number(value);
+        }
+    })
+    return resultObject;
+     }
+console.log(obj())
