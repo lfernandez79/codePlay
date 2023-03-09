@@ -154,3 +154,5 @@ const runningSum = (nums) => {
     return nums
 }
 console.log(runningSum([2, 2, 2, 2]))
+
+

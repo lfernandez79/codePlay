@@ -22,9 +22,9 @@ console.log(result(), "\n")
 console.log("========== RegEx look in a string for digit and non-digit ==========")
 
 let intro = "Hello I'm 40 years old, born in 1979";
-dFind = () => console.log(intro.match(/\D/g).join(""));
+const dFind = () => console.log(intro.match(/\D/g).join(""));
 dFind();
-Dfind = () => console.log(intro.match(/\d/g), "\n");
+const Dfind = () => console.log(intro.match(/\d/g), "\n");
 Dfind()
 
 
@@ -61,9 +61,11 @@ console.log(typeof 12)
 
 // Pullin domain name from URL
 const getDomain = (str) => {
-    url = str.toString().replace('https://', '').replace('http://', '').replace('www.', '');
+    const url = str.toString().replace('https://', '').replace('http://', '').replace('www.', '');
 
     return url.split('.')[0];
     
 }
 console.log(getDomain("www.xakep.ru"))
+
+

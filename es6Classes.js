@@ -35,7 +35,7 @@ class Engine extends Model {
 }
 
 
-myCar = new Car("VOLVO", "black");
+let myCar = new Car("VOLVO", "black");
 console.log("1 " + myCar.carname);
 console.log("2 " + myCar.iOwn() + "\n");
 
@@ -92,3 +92,5 @@ for (const { myName: L, family: { wife: w, daugthers: { child1: i, child2: c }, 
 }
 console.log(names)
 console.log(kids)
+
+

@@ -1,48 +1,62 @@
-// let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-// let httpRequest = new XMLHttpRequest();
+// import fetch from "node-fetch";
 
-// httpRequest.open(
-//     "GET",
-//     "https://www.omdbapi.com/?t=Tron%20Legacy&apikey=trilogy",
+// let movieUrl = 'https://jsonmock.hackerrank.com/api/movies/search/?Title=maze';
+// fetch(movieUrl)
+//     .then(data => data.json())
+//     .then(res => console.log(res));
 
-// );
-// httpRequest.responseType = "json"
-// httpRequest.send();
+// let url = 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits';
+// let response = fetch(url)
+//     .then(res => res.json()
+//     .then(info => console.log(info))
+//     );
 
-// httpRequest.onload = function () {
-//     if (httpRequest.status !== 200) {
-//         console.log(`Error ${httpRequest.status} ${httpRequest.statusText}`)
-//     } else {
-//         console.log(`Done, got ${httpRequest.responseType} response and status was: ${httpRequest.status}`)
-//     }
-//     console.log(httpRequest.response)
-// }
+// async function getResponse() {
+// 	const response = await fetch(
+// 		'https://jsonmock.hackerrank.com/api/food_outlets',
+// 		{
+// 			method: 'GET',
+// 			redirect: "follow"
+// 		}
+// 	);
+// 	if (!response.ok) {
+// 		throw new Error(`HTTP error! status: ${response.status}`);
+// 	}  else {
+// 	const result = await response.json();
+//   console.log(result.data[0], result.data[1])
 
-
-// let httpRequest2 = new XMLHttpRequest();
-// httpRequest2.open(
-//     "GET",
-//     "https://jsonmock.hackerrank.com/api/countries/search?name=M"
-//   );
-//   httpRequest2.responseType = "json"
-//   httpRequest2.send();
-
-//   httpRequest2.onload = function() {
-//     if(httpRequest2.status !== 200) {
-//       console.log(`Error: ${httpRequest2.status}`)
-//     }
-//     else {
-//       console.log(httpRequest2.response, httpRequest2.response.data)
-//     }
 //   }
+// }
+// getResponse();
 
-let movieUrl = 'https://jsonmock.hackerrank.com/api/movies/search/?Title=maze';
-fetch(movieUrl)
-    .then(data => data.json())
-    .then(res => console.log(res));
+//
+// async function getHoliday(month, position) {
+//   const response = await fetch(
+//     "https://personalized-support-3977.twil.io/holidays",
+//     {
+//       method: "GET",
+//       redirect: "follow",
+//     }
+//   );
+//   if (!response.ok) {
+//     throw new Error(`HTTP Error status: ${response.status}`);
+//   } else {
+//     const data = await response.json();
+//     console.log(data);
+//   }
+// }
+// getHoliday();
 
-let url = 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits';
-let response = fetch(url)
-    .then(res => res.json()
-    .then(info => console.log(info))
-    );
+
+const settingAPI = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '912f8882abmsh597d3316e2e61bcp121db1jsnabc830ace42d',
+		'X-RapidAPI-Host': 'airport-info.p.rapidapi.com'
+	}
+};
+
+fetch('https://airport-info.p.rapidapi.com/airport?iata=LAX', settingAPI)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));

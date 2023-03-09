@@ -95,7 +95,7 @@ console.log(findSum(10))
 
 const bizzbuzz = (n) => {
     let myNums = []
-    for (i = 1; i <= n; i++) {
+    for (i = 0; i <= n; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
             myNums.push('bizzbuzz')
         } else if (i % 5 === 0) {
@@ -108,7 +108,7 @@ const bizzbuzz = (n) => {
     }
     return myNums
 };
-console.table(bizzbuzz(20));
+console.table(bizzbuzz(15));
 
 
 const phoneNumber = (numbers) => {
