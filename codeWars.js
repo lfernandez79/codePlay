@@ -135,6 +135,24 @@ function bears(x, s) {
 }
 console.log(bears(7, "EvHB8KN8ik8BiyxfeyKBmiCMj"))
 
-for (let i = 0; i < array.length; i++) {
-    
-}
+// DESCRIPTION: Complete the solution so that it splits the string into pairs of two characters. 
+// If the string contains an odd number of characters then it should replace 
+// the missing second character of the final pair with an underscore ('_').
+
+// Examples:
+// * 'abc' =>  ['ab', 'c_']
+// * 'abcdef' => ['ab', 'cd', 'ef']
+
+let letters = "abcdefghijklmnopqrstuvwxy"
+
+function solution(letters){
+  
+    const pairs = [];
+    for (let i = 0; i < letters.length; i += 2) {
+      const pair = letters.slice(i, i + 2);
+        console.log(letters[i], pair)
+      pairs.push(pair.length === 2 ? pair : pair + '_');
+    }
+    return pairs;
+  }
+  console.log(solution(letters))

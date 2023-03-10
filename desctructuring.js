@@ -1,12 +1,12 @@
 // JS arry classic vs Destructuring
-let name = ['Leo', 'Fernandez'];
-console.log(name[0] + ' ' + name[1]);
+let myName = ['Leo', 'Fernandez'];
+console.log(myName[0] + ' ' + myName[1]);
 
 // ======================================
-let fullName = ['Lenny', 'Fernandez'];
-let [firsName, surName] = fullName;
-console.log(firsName + ' ' + surName);
-console.log(surName);
+let fullName = ["Jose", 'Leonardo', 'Fernandez', "Arellano"];
+let [firsName, midName] = fullName;
+console.log(firsName + ' ' + midName);
+console.log(midName);
 console.log(fullName);
 
 // ========================================
@@ -26,17 +26,26 @@ console.log(howOld(21));
 
 // Object Destructuring
 const arya = {
-    call: "Arya Stark",
+    realName: "Arya Stark",
     parents: ["Tywin Lannister", "Joanna Lannister"]
 };
 const aryaParents = arya.parents;
-console.log(arya.call)
-console.log(aryaParents)
+console.log(arya.realName)
+console.log(arya.parents)
 
 // ES6
-const { call, parents } = arya
-console.log(call)
+const { realName, parents } = arya
+console.log(arya)
 
-const betterLogCharacter = ({ call, parents }) => 
-    console.log(call + "'s parents are: " + parents[0] + " and " + parents[1]);
+const betterLogCharacter = ({ realName, parents }) => 
+    console.log(realName + "'s parents are: " + parents[0] + " and " + parents[1]);
 betterLogCharacter(arya)
+
+
+let sumAndMulti = (a, b) => {
+    return [a + b, a * b];
+}
+const [sum, multi, division = "No division"] = sumAndMulti(5, 5);
+console.log(sum)
+console.log(multi)
+console.log(division)
